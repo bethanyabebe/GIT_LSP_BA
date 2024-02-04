@@ -32,31 +32,24 @@ public class FileUtils {
 
         // Process each line
         for (String line : lines) {
-            // Split the line into words based on spaces
-            String[] words = line.split("\\s+");
+            // Split the line into words based on non letter/numerical characters. Also splits contractions to two words
+            String[] words = line.split("[^a-zA-Z0-9]");
 
             // Process each word
             for (String word : words) {
-                // Convert to lowercase
+            	// Convert to lowercase
                 word = word.toLowerCase();
                 
                 // Check if the word is alphabetical or alphanumeric
                 if (word.matches(".*[a-zA-Z].*") && !word.matches("\\d+")) {
-                        // Split contractions into two words
-                        String[] splitContractions = word.split("'");
-                        
-                        // Process each part of the split contractions
-                        for (String part : splitContractions) {
-                            // Ignore trivial words with 3 or fewer letters
-                            if (part.length() > 3) {
-                                // Update word count
-                                wordCount.put(part, wordCount.getOrDefault(part, 0) + 1);
-                            }
-                        }
+                	// Check if word is not trivial (<= 3 letters)
+                	if (word.length() > 3) {
+                		// Update word count
+                        wordCount.put(word, wordCount.getOrDefault(word, 0) + 1);
                     }
                 }
-        }	
-
+            }
+        }
         return wordCount;
     }
 
