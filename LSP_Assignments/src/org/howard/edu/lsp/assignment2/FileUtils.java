@@ -37,10 +37,10 @@ public class FileUtils {
 
             // Process each word
             for (String word : words) {
-                // Remove non-alphanumeric characters and convert to lowercase
+                // Convert to lowercase
                 word = word.toLowerCase();
                 
-                // Check if the word contains at least one alphabetical character & ignore strings with only digits
+                // Check if the word is alphabetical or alphanumeric
                 if (word.matches(".*[a-zA-Z].*") && !word.matches("\\d+")) {
                         // Split contractions into two words
                         String[] splitContractions = word.split("'");
