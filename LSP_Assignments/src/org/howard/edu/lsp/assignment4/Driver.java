@@ -101,6 +101,12 @@ public class Driver {
         setA.add(4);
         setA.add(6);
         
+        System.out.println("setA: " + setA.toString());
+        // Expected: [-2,2,4,6]
+        System.out.println("setB: " + setB.toString());
+        // Excepted: [0,1,2]
+
+
         System.out.println("Does setA contain -2? " + setA.contains(-2));
         // Expected: True 
         System.out.println("Does setB contain -2? " + setB.contains(-2));
@@ -185,6 +191,7 @@ public class Driver {
         System.out.println("Difference of setA & setB: " + setA.toString());
         // Expected: [6]
         
+       
         setA.clear();
         setB.clear();
         setA.add(1);
@@ -197,6 +204,11 @@ public class Driver {
         setB.add(5);
         setB.add(6);
         setB.add(7);
+        
+        System.out.println("setA: " + setA.toString());
+        // Expected: [1,2,3,4,5]
+        System.out.println("setB: " + setB.toString());
+        // Expected: [3,4,5,6,7]
         
         setA.complement(setB);
         System.out.println("Complement of setA: " + setA.toString());
@@ -218,5 +230,22 @@ public class Driver {
         setA.diff(setB);
         System.out.println("Diff of setA: " + setA.toString());
         // Expected: [1,2]
+        
+        setA.clear();
+        setB.clear();
+        setA.add(1);
+        setA.add(2);
+        setA.add(3);
+        setA.add(4);
+        setA.add(5);
+        setB.add(3);
+        setB.add(4);
+        setB.add(5);
+        setB.add(6);
+        setB.add(7);
+        setB.diff(setA);
+        System.out.println("Diff of setB: " + setB.toString());
+        // Expected: [6,7]
+        
 	}
 }
