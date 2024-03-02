@@ -52,7 +52,7 @@ public class IntegerSet  {
 	public boolean equals(Object o) {
 		// The two objects are the same
 		if (this == o) return true;
-		// The bject is null or not a set 
+		// The object is null or not a set 
 		if (o == null || getClass() != o.getClass()) return false;
 		// Create instance of o where instance.set is o
 		IntegerSet oInstance = (IntegerSet) o;
