@@ -53,8 +53,13 @@ public class IntegerRange implements Range{
 	 */
 	@Override
 	public boolean equals(Object obj) {
+		// if they're the same object, return true
         if (this == obj) return true;
+        
+        // if no object is supplied or they're of different class types, return false
         if (obj == null || getClass() != obj.getClass()) return false;
+        
+        // inits other as IntegerRange type, then checks if the lower & upper bound are the same
         IntegerRange other = (IntegerRange) obj;
         return lowerBound == other.lowerBound && upperBound == other.upperBound;
 	}
