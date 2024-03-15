@@ -1,14 +1,14 @@
 package org.howard.edu.lsp.midterm.question2;
 
 /**
- * class implementing Range interface
+ * Class implementing Range interface on an range of integers.
  */
 public class IntegerRange implements Range{
 	private int lowerBound;
 	private int upperBound;
 	
     /**
-     * constructs an integer range with provided lower and upper bounds
+     * Constructs an integer range with provided lower and upper bounds
      * @param lowerBound the lower bound of the range
      * @param upperBound the upper bound of the range
      */
@@ -18,7 +18,7 @@ public class IntegerRange implements Range{
 	}
 	
 	/**
-	 * determines whether the range contains the supplied value
+	 * Determines whether the range contains the supplied value
 	 * @param value the value to check if in range
 	 * @return true if in range, false otherwise
 	 */
@@ -28,7 +28,7 @@ public class IntegerRange implements Range{
 	}
 
 	/**
-	 * determines if the receiver contains at least one value in common with other
+	 * Determines if the receiver contains at least one value in common with other
 	 * @param other the range to check against
 	 * @return true if the receiver contains at least one value in common with other, and false otherwise
 	 */
@@ -38,7 +38,7 @@ public class IntegerRange implements Range{
 	}
 	
 	/**
-	 * determines size of the range (inclusive)
+	 * Determines size of the range (inclusive)
 	 * @return size of range
 	 */
 	@Override
@@ -47,7 +47,7 @@ public class IntegerRange implements Range{
 	}
 	
 	/**
-	 * checks if two ranges are equal 
+	 * Checks if two ranges are equal 
 	 * @param obj the object to check against 
 	 * @return true if equal (lower & upper bounds are the same), false otherwise
 	 */
@@ -60,7 +60,7 @@ public class IntegerRange implements Range{
 	}
 	
 	/**
-	 * gets lower bound
+	 * Gets lower bound
 	 * @return lower bound
 	 */
     public int getLowerBound() {
@@ -68,7 +68,7 @@ public class IntegerRange implements Range{
     }
     
 	/**
-	 * gets upper bound
+	 * Gets upper bound
 	 * @return upper bound
 	 */
     public int getUpperBound() {
