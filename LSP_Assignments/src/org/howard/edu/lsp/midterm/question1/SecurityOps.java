@@ -23,8 +23,7 @@ public class SecurityOps {
 		// iterate through each character of the supplied string
 		for (int i = 0; i< text.length(); i++)
 		{
-			
-			// check that current character is not punctuation/whitespace
+			// add to even/odd character builder based on index
 			char currChar = text.charAt(i);
 			if (i % 2 == 0)
 			{
